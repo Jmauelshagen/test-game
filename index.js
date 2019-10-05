@@ -64,7 +64,7 @@ let playExpert = async () => {
             }
             else{
                 changecolor();
-                await timer(time - count*5);
+                await timer(time - count*2);
             }
         }
     } while (endGame === null);
@@ -87,7 +87,7 @@ let playPro = async () => {
             }
             else{
                 changecolor();
-                await timer(time - count*5);
+                await timer(time - count*2);
             }
         }
     } while (endGame === null);
@@ -110,7 +110,7 @@ let playBeginner = async () => {
             }
             else{
                 changecolor();
-                await timer(time - count*5);
+                await timer(time - count*2);
             }
         }
     } while (endGame === null);
