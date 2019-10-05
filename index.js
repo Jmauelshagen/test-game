@@ -16,18 +16,29 @@ let playExpert = async () => {
     playing = true;
     while(playing === true) {
         while (whiteSquares.length !== 0){
-            changecolor();
-            await timer(200);
+            if(whiteSquares.length === 16){
+                changecolor();
+            }
+            else{
+                changecolor();
+                await timer(200);
+            }
+            console.log("still running");
         }
-        stopGame();
     }
+    stopGame();
 }
 let playPro = async () => {
     playing = true;
     while(playing === true) {
         while (whiteSquares.length !== 0){
-            changecolor();
-            await timer(400);
+            if(whiteSquares.length === 16){
+                changecolor();
+            }
+            else{
+                changecolor();
+                await timer(400);
+            }
         }
         stopGame();
     }
@@ -36,9 +47,13 @@ let playBeginner = async () => {
     playing = true;
     while(playing === true) {
         while (whiteSquares.length !== 0){
-            console.log(whiteSquares.length);
-            changecolor();
-            await timer(600);
+            if(whiteSquares.length === 16){
+                changecolor();
+            }
+            else{
+                changecolor();
+                await timer(600);
+            }
         }
         stopGame();
     }
@@ -57,6 +72,7 @@ const changecolor = () =>{
 
 const stopGame = () => {
     playing = false;
+    whiteSquares = [];
     for (i = 1 ; i < 17 ; i++){
         const item = document.getElementById(i);
         item.classList.replace(item.classList[1], 'white');
