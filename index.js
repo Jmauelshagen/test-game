@@ -25,8 +25,8 @@ let playExpert = async () => {
             }
             console.log("still running");
         }
+      stopGame();
     }
-    stopGame();
 }
 let playPro = async () => {
     playing = true;
