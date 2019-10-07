@@ -29,10 +29,10 @@ const timeLimit = async (item) => {
             item.innerText = i;
             lives--;
             livesLeft.innerHTML = lives;
-            await timer(10);
+            // await timer(10);
             if(lives === 0){
                 endGame = 'lives'
-                stopGame();
+                // stopGame();
             }
             else{
                 lifeLost(item);
@@ -102,7 +102,6 @@ let playBeginner = async () => {
     do {
         if(count*5 >= time){
             endGame = 'win';
-            stopGame();
         }
         else{
             if(whiteSquares.length === 16){
@@ -114,6 +113,7 @@ let playBeginner = async () => {
             }
         }
     } while (endGame === null);
+    stopGame();
 }
 
 const changecolor = () =>{
@@ -130,7 +130,7 @@ const changecolor = () =>{
     }
     else{
         endGame = 'numbers';
-        stopGame();
+        // stopGame();
     }
 }
 
